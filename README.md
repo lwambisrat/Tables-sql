@@ -25,7 +25,11 @@ The database consists of the following tables in the `company` schema:
    Use the provided SQL queries to explore and analyze the sample company data.
 
 # Example: Select Total Sales Per Department
+
 SELECT e.Department, SUM(s.Total) AS total_sales
+
 FROM company.employees e
+
 JOIN company.sales s ON e.EmployeeID = s.EmployeeId
+
 GROUP BY e.Department;
